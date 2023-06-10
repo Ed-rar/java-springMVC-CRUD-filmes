@@ -29,20 +29,25 @@ public class FilmeController {
     }
 
     @GetMapping("/incluir")
-    public String paginaIncluirFilme() {
-        return "filmes/formulario";
-    }
+    // Código original
+    // public String paginaIncluirFilme() {
+    //     return "filmes/formulario";
+    // }
+    public String paginaIncluirFilme(Model model) {
+    model.addAttribute("filmeDTO", new FilmeDTO());
+    return "filmes/formulario";
+}
 
     @PostMapping
     public String incluirFilme(@Validated FilmeDTO filmeDTO, BindingResult result) {
         if(result.hasErrors()) {
-            return "filmes/formulario";
+            return "redirect:/filmes";
         }
 
         Filme filme = filmeDTO.toFilme();
         repository.save(filme);
 
-        return "redirect:/lista-filmes";
+        return "redirect:/filmes";
     }
 
 }
