@@ -22,7 +22,7 @@ public class FilmeController {
     private FilmesRepository repository;
 
     @GetMapping
-    public String getFlilmes(Model model){
+    public String getFilmes(Model model){
         List<Filme> filmes = repository.findAll();
         model.addAttribute("filmes", filmes);
         return "filmes/lista-filmes";

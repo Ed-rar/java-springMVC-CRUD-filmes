@@ -1,0 +1,75 @@
+/* Scrollbars */
+*::-webkit-scrollbar-track {
+    /* cor e reio da faixa da barra de rolagem */
+    background-color: #ffffff;
+}
+*::-webkit-scrollbar {
+    /* Largura e altura da barra de rolagem */
+    width: 6px;
+    background-color: #ffffff;
+}
+*::-webkit-scrollbar-thumb {
+    /* Cor e raio do "polegar" da barra de rolagem */
+    background-color: #8d8d8d;
+    border-radius: 35px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #efefef;
+}
+/* Index */
+.wrapper {
+    position: relative;
+    width: 900px;
+    height: 500px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 30px -1px rgba(0,0,0,0.10);
+}
+.wrapper h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: 300;
+    margin: 0 0 .5em 0;
+}
+.wrapper h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 0 0 1em 0;
+}
+.wrapper p {
+    font-size: 1em;
+    line-height: 1.8em;
+    font-weight: 300;
+}
+.sub{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 .6em 0;
+}
+.wrapper a {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.invalid {
+	border-color: #F00;
+}
+
+.text-muted {
+	display: none;
+}

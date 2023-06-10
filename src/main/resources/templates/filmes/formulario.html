@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>incluir</title>
-</head>
-<body>
-
-</body>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/src/main/resources/templates/css/style.css">
+        <title>Adicionar Filme | TADS Atividade Desenvolvimento Web 2023-1</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Incluir novo filme</h1>
+            <form action="post" class="form">
+                <!-- Titulo -->
+                <div class="mb-3">
+                    <label for="titulo" class="form-label">Título:</label>
+                    <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Preencha o título do filme"
+                        aria-describedby="helpTitulo">
+                    <small id="helpTitulo" class="text-muted">Digite um titulo valido</small>
+                </div>
+                <!-- Genero -->
+                <div class="mb-3">
+                    <label for="genero" class="form-label">Gênero:</label>
+                    <input type="text" name="genero" id="genero" class="form-control" placeholder="Preencha o gênero do filme (ação, drama, terror, etc)"
+                        aria-describedby="helpGenero">
+                    <small id="helpGenero" class="text-muted">Digite um gênero valido</small>
+                </div>
+                <!-- Ano -->
+                <div class="mb-3">
+                    <label for="anoLancamento" class="form-label">Ano de Lançamento:</label>
+                    <input type="text" name="anoLancamento" id="anoLancamento" class="form-control" placeholder="Preencha o ano de lançamento do filme"
+                        aria-describedby="helpAnoLancamento">
+                    <small id="helpAnoLancamento" class="text-muted">Digite um ano valida</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <a class="btn btn-secondary" href="/filmes">Cancelar</a>
+            </form>
+        </div>
+        <script src="/src/main/resources/templates/vendor/jquery/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="/src/main/resources/templates/js/custom.js"></script>
+    </body>
 </html>
