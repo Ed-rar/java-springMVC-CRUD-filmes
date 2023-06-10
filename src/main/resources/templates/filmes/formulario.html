@@ -11,26 +11,26 @@
     <body>
         <div class="container">
             <h1>Incluir novo filme</h1>
-            <form action="post" class="form">
+            <form action="/filmes" class="form" th:object="${filmeDTO}">
                 <!-- Titulo -->
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Título:</label>
                     <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Preencha o título do filme"
-                        aria-describedby="helpTitulo">
+                        aria-describedby="helpTitulo" th:field="*{titulo}">
                     <small id="helpTitulo" class="text-muted">Digite um titulo valido</small>
                 </div>
                 <!-- Genero -->
                 <div class="mb-3">
                     <label for="genero" class="form-label">Gênero:</label>
                     <input type="text" name="genero" id="genero" class="form-control" placeholder="Preencha o gênero do filme (ação, drama, terror, etc)"
-                        aria-describedby="helpGenero">
+                        aria-describedby="helpGenero" th:field="*{genero}">
                     <small id="helpGenero" class="text-muted">Digite um gênero valido</small>
                 </div>
                 <!-- Ano -->
                 <div class="mb-3">
                     <label for="anoLancamento" class="form-label">Ano de Lançamento:</label>
                     <input type="text" name="anoLancamento" id="anoLancamento" class="form-control" placeholder="Preencha o ano de lançamento do filme"
-                        aria-describedby="helpAnoLancamento">
+                        aria-describedby="helpAnoLancamento" th:field="*{anoLancamento}">
                     <small id="helpAnoLancamento" class="text-muted">Digite um ano valida</small>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
