@@ -81,3 +81,8 @@ $('body').on('blur', '#genero', function () {
 $('body').on('blur', '#anoLancamento', function () {
     validate($(this));
 });
+
+function goBack() {
+  history.back();
+  window.location.reload();
+}
