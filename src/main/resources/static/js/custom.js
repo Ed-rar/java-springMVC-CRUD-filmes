@@ -83,6 +83,5 @@ $('body').on('blur', '#anoLancamento', function () {
 });
 
 function goBack() {
-  history.back();
-  window.location.reload();
+  window.location.href="/filmes";
 }
