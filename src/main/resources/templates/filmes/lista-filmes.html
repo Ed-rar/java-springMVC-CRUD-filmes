@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>lista-filmes</title>
-</head>
-<body>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+        <title>Lista de Filmes | TADS Atividade Desenvolvimento Web 2023-1</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Listagem de Filmes</h1>
+            <div class="alert alert-success" id="successMessage" style="display: none;">
+                <h4><strong>Filme adicionado com sucessos</strong></h4>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Gênero</th>
+                        <th>Ano de Lançamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="filme : ${filmes}"> 
+                        <td th:text="${filme.id}"></td>
+                        <td th:text="${filme.titulo}"></td> 
+                        <td th:text="${filme.genero}"></td>
+                        <td th:text="${filme.anoLancamento}"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-primary" href="filmes/incluir">+ Novo Filme</a>
+        </div>
 
-</body>
+        <script th:src="@{/vendor/jquery/jquery-3.6.4.min.js}"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script th:src="@{/js/custom.js}"></script>
+    </body>
 </html>

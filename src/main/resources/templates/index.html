@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/css/style.css}">
         <title>TADS Atividade Desenvolvimento Web 2023-1</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <h1>Listagem e inclusão de filmes</h1>
-        <h2>TADS Atividade Desenvolvimento Web 2023-1 - Turma A</h2>
-        <p>Nome completo: <strong>Eduardo Ramos Alves Ribeiro</strong></p>
-        <p>Está cursando PI4 neste semestre? <strong>SIM</strong></p>
-        <p>Observações:<br />
-            <em style="color: #aaa">- index.html está na pasta "templates" porque é a pasta padrão de acesso do Spring MVC
-                <br>- arquivo gerado pelo banco H2 é salvo dentro da pasta do usuário logado na máquina
-            </em>
-        </p>
-        <p>
-            <a href="/filmes">Link para tela de listagem dos filmes</a>
-        </p>
+        <div class="wrapper">
+            <h1>Listagem e inclusão de filmes</h1>
+            <h2>TADS Atividade Desenvolvimento Web 2023-1 - Turma A</h2>
+            <div class="sub">
+                <p>Nome completo: <strong>Eduardo Ramos Alves Ribeiro</strong></p>
+                <p>Está cursando PI4 neste semestre? <strong>SIM</strong></p>
+                <p>Observações:
+                    <em style="color: #aaa">
+                        <br>- index.html está na pasta "templates" porque é a pasta padrão de acesso do Spring MVC
+                        <br>- arquivo gerado pelo banco H2 é salvo dentro da pasta do usuário logado na máquina
+                    </em>
+                </p>
+                <p style="padding-top: 10px;"><a href="/filmes">Link para tela de listagem dos filmes</a></p>
+            </div>
+        </div>
     </body>
 </html>
